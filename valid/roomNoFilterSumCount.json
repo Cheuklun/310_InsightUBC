@@ -1,0 +1,259 @@
+{
+	"title": "roomNoFilterSumCount",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"totalSeats",
+				"distinctTypes"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"totalSeats"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_shortname"
+			],
+			"APPLY": [
+				{
+					"totalSeats": {
+						"SUM": "rooms_seats"
+					}
+				},
+				{
+					"distinctTypes": {
+						"COUNT": "rooms_type"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"rooms_shortname": "BUCH",
+			"totalSeats": 3190,
+			"distinctTypes": 4
+		},
+		{
+			"rooms_shortname": "ANGU",
+			"totalSeats": 1546,
+			"distinctTypes": 5
+		},
+		{
+			"rooms_shortname": "SWNG",
+			"totalSeats": 1421,
+			"distinctTypes": 3
+		},
+		{
+			"rooms_shortname": "WOOD",
+			"totalSeats": 1297,
+			"distinctTypes": 2
+		},
+		{
+			"rooms_shortname": "SCRF",
+			"totalSeats": 1004,
+			"distinctTypes": 2
+		},
+		{
+			"rooms_shortname": "CHEM",
+			"totalSeats": 913,
+			"distinctTypes": 1
+		},
+		{
+			"rooms_shortname": "SRC",
+			"totalSeats": 897,
+			"distinctTypes": 1
+		},
+		{
+			"rooms_shortname": "LSC",
+			"totalSeats": 825,
+			"distinctTypes": 1
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"totalSeats": 662,
+			"distinctTypes": 3
+		},
+		{
+			"rooms_shortname": "HENN",
+			"totalSeats": 658,
+			"distinctTypes": 2
+		},
+		{
+			"rooms_shortname": "FSC",
+			"totalSeats": 621,
+			"distinctTypes": 3
+		},
+		{
+			"rooms_shortname": "GEOG",
+			"totalSeats": 619,
+			"distinctTypes": 3
+		},
+		{
+			"rooms_shortname": "ESB",
+			"totalSeats": 580,
+			"distinctTypes": 1
+		},
+		{
+			"rooms_shortname": "MCML",
+			"totalSeats": 573,
+			"distinctTypes": 4
+		},
+		{
+			"rooms_shortname": "IBLC",
+			"totalSeats": 568,
+			"distinctTypes": 4
+		},
+		{
+			"rooms_shortname": "PHRM",
+			"totalSeats": 538,
+			"distinctTypes": 3
+		},
+		{
+			"rooms_shortname": "HEBB",
+			"totalSeats": 537,
+			"distinctTypes": 2
+		},
+		{
+			"rooms_shortname": "OSBO",
+			"totalSeats": 521,
+			"distinctTypes": 2
+		},
+		{
+			"rooms_shortname": "LSK",
+			"totalSeats": 505,
+			"distinctTypes": 2
+		},
+		{
+			"rooms_shortname": "MCLD",
+			"totalSeats": 503,
+			"distinctTypes": 3
+		},
+		{
+			"rooms_shortname": "MATH",
+			"totalSeats": 495,
+			"distinctTypes": 3
+		},
+		{
+			"rooms_shortname": "DMP",
+			"totalSeats": 440,
+			"distinctTypes": 2
+		},
+		{
+			"rooms_shortname": "WESB",
+			"totalSeats": 427,
+			"distinctTypes": 1
+		},
+		{
+			"rooms_shortname": "CIRS",
+			"totalSeats": 426,
+			"distinctTypes": 1
+		},
+		{
+			"rooms_shortname": "CHBE",
+			"totalSeats": 354,
+			"distinctTypes": 2
+		},
+		{
+			"rooms_shortname": "BIOL",
+			"totalSeats": 336,
+			"distinctTypes": 2
+		},
+		{
+			"rooms_shortname": "LASR",
+			"totalSeats": 325,
+			"distinctTypes": 4
+		},
+		{
+			"rooms_shortname": "CEME",
+			"totalSeats": 289,
+			"distinctTypes": 3
+		},
+		{
+			"rooms_shortname": "FNH",
+			"totalSeats": 263,
+			"distinctTypes": 3
+		},
+		{
+			"rooms_shortname": "PCOH",
+			"totalSeats": 240,
+			"distinctTypes": 2
+		},
+		{
+			"rooms_shortname": "ALRD",
+			"totalSeats": 228,
+			"distinctTypes": 2
+		},
+		{
+			"rooms_shortname": "SOWK",
+			"totalSeats": 201,
+			"distinctTypes": 2
+		},
+		{
+			"rooms_shortname": "ANSO",
+			"totalSeats": 186,
+			"distinctTypes": 2
+		},
+		{
+			"rooms_shortname": "SPPH",
+			"totalSeats": 166,
+			"distinctTypes": 2
+		},
+		{
+			"rooms_shortname": "UCLL",
+			"totalSeats": 163,
+			"distinctTypes": 3
+		},
+		{
+			"rooms_shortname": "FRDM",
+			"totalSeats": 160,
+			"distinctTypes": 1
+		},
+		{
+			"rooms_shortname": "IONA",
+			"totalSeats": 150,
+			"distinctTypes": 2
+		},
+		{
+			"rooms_shortname": "AERL",
+			"totalSeats": 144,
+			"distinctTypes": 1
+		},
+		{
+			"rooms_shortname": "FORW",
+			"totalSeats": 142,
+			"distinctTypes": 2
+		},
+		{
+			"rooms_shortname": "MATX",
+			"totalSeats": 106,
+			"distinctTypes": 1
+		},
+		{
+			"rooms_shortname": "BRKX",
+			"totalSeats": 94,
+			"distinctTypes": 2
+		},
+		{
+			"rooms_shortname": "MGYM",
+			"totalSeats": 65,
+			"distinctTypes": 1
+		},
+		{
+			"rooms_shortname": "EOSM",
+			"totalSeats": 50,
+			"distinctTypes": 1
+		},
+		{
+			"rooms_shortname": "AUDX",
+			"totalSeats": 41,
+			"distinctTypes": 1
+		}
+	]
+}

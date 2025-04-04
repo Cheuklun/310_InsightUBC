@@ -1,0 +1,61 @@
+{
+	"title": "validANDEQEQ",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"EQ": {
+						"sections_avg": 90
+					}
+				},
+				{
+					"EQ": {
+						"sections_year": 2010
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_avg"
+			],
+			"ORDER": "sections_avg"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_dept": "sowk",
+			"sections_avg": 90
+		},
+		{
+			"sections_dept": "math",
+			"sections_avg": 90
+		},
+		{
+			"sections_dept": "geog",
+			"sections_avg": 90
+		},
+		{
+			"sections_dept": "frst",
+			"sections_avg": 90
+		},
+		{
+			"sections_dept": "epse",
+			"sections_avg": 90
+		},
+		{
+			"sections_dept": "edst",
+			"sections_avg": 90
+		},
+		{
+			"sections_dept": "econ",
+			"sections_avg": 90
+		},
+		{
+			"sections_dept": "dent",
+			"sections_avg": 90
+		}
+	]
+}

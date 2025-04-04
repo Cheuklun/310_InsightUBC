@@ -1,0 +1,31 @@
+{
+	"title": "roomFilterAndSumSeats",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"rooms_furniture": "Fixed Tables"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"totalFixedSeats"
+			],
+			"ORDER": "rooms_shortname"
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_shortname"
+			],
+			"APPLY": [
+				{
+					"totalFixedSeats": {
+						"SUM": "rooms_seats"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": []
+}

@@ -1,0 +1,24 @@
+{
+	"title": "getOneSection",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"sections_uuid": "12218"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_avg"
+			],
+			"ORDER": "sections_avg"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_dept": "anth",
+			"sections_avg": 75.99
+		}
+	]
+}

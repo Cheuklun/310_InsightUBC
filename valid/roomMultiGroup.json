@@ -1,0 +1,624 @@
+{
+	"title": "roomMultiGroup",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"rooms_type",
+				"maxLat",
+				"countFurniture"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"maxLat",
+					"rooms_shortname"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_shortname",
+				"rooms_type"
+			],
+			"APPLY": [
+				{
+					"maxLat": {
+						"MAX": "rooms_lat"
+					}
+				},
+				{
+					"countFurniture": {
+						"COUNT": "rooms_furniture"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"rooms_shortname": "IONA",
+			"rooms_type": "Case Style",
+			"maxLat": 49.27106,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "IONA",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.27106,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "ALRD",
+			"rooms_type": "Case Style",
+			"maxLat": 49.2699,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "ALRD",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.2699,
+			"countFurniture": 2
+		},
+		{
+			"rooms_shortname": "ANSO",
+			"rooms_type": "Small Group",
+			"maxLat": 49.26958,
+			"countFurniture": 2
+		},
+		{
+			"rooms_shortname": "ANSO",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.26958,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "UCLL",
+			"rooms_type": "Small Group",
+			"maxLat": 49.26867,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "UCLL",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.26867,
+			"countFurniture": 2
+		},
+		{
+			"rooms_shortname": "UCLL",
+			"rooms_type": "Studio Lab",
+			"maxLat": 49.26867,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "BRKX",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26862,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "BRKX",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.26862,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "SRC",
+			"rooms_type": "TBD",
+			"maxLat": 49.2683,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "BUCH",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26826,
+			"countFurniture": 3
+		},
+		{
+			"rooms_shortname": "BUCH",
+			"rooms_type": "Case Style",
+			"maxLat": 49.26826,
+			"countFurniture": 3
+		},
+		{
+			"rooms_shortname": "BUCH",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.26826,
+			"countFurniture": 3
+		},
+		{
+			"rooms_shortname": "BUCH",
+			"rooms_type": "Small Group",
+			"maxLat": 49.26826,
+			"countFurniture": 3
+		},
+		{
+			"rooms_shortname": "LASR",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26767,
+			"countFurniture": 2
+		},
+		{
+			"rooms_shortname": "LASR",
+			"rooms_type": "",
+			"maxLat": 49.26767,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "LASR",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.26767,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "LASR",
+			"rooms_type": "Small Group",
+			"maxLat": 49.26767,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "IBLC",
+			"rooms_type": "Case Style",
+			"maxLat": 49.26766,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "IBLC",
+			"rooms_type": "Small Group",
+			"maxLat": 49.26766,
+			"countFurniture": 3
+		},
+		{
+			"rooms_shortname": "IBLC",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26766,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "IBLC",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.26766,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "AUDX",
+			"rooms_type": "Small Group",
+			"maxLat": 49.2666,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "MATH",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.266463,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "MATH",
+			"rooms_type": "Small Group",
+			"maxLat": 49.266463,
+			"countFurniture": 2
+		},
+		{
+			"rooms_shortname": "MATH",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.266463,
+			"countFurniture": 2
+		},
+		{
+			"rooms_shortname": "MGYM",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.2663,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "HENN",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26627,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "HENN",
+			"rooms_type": "Small Group",
+			"maxLat": 49.26627,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "HEBB",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.2661,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "HEBB",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.2661,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "MATX",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.266089,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "GEOG",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26605,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "GEOG",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.26605,
+			"countFurniture": 2
+		},
+		{
+			"rooms_shortname": "GEOG",
+			"rooms_type": "Small Group",
+			"maxLat": 49.26605,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "CHEM",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.2659,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "LSK",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26545,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "LSK",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.26545,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "FRDM",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26541,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "WESB",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26517,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "ANGU",
+			"rooms_type": "Case Style",
+			"maxLat": 49.26486,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "ANGU",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26486,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "ANGU",
+			"rooms_type": "Small Group",
+			"maxLat": 49.26486,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "ANGU",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.26486,
+			"countFurniture": 2
+		},
+		{
+			"rooms_shortname": "ANGU",
+			"rooms_type": "TBD",
+			"maxLat": 49.26486,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "BIOL",
+			"rooms_type": "Small Group",
+			"maxLat": 49.26479,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "BIOL",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26479,
+			"countFurniture": 2
+		},
+		{
+			"rooms_shortname": "WOOD",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26478,
+			"countFurniture": 2
+		},
+		{
+			"rooms_shortname": "WOOD",
+			"rooms_type": "Small Group",
+			"maxLat": 49.26478,
+			"countFurniture": 2
+		},
+		{
+			"rooms_shortname": "SOWK",
+			"rooms_type": "Small Group",
+			"maxLat": 49.2643,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "SOWK",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.2643,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "SPPH",
+			"rooms_type": "Small Group",
+			"maxLat": 49.2642,
+			"countFurniture": 2
+		},
+		{
+			"rooms_shortname": "SPPH",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.2642,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "FNH",
+			"rooms_type": "Small Group",
+			"maxLat": 49.26414,
+			"countFurniture": 2
+		},
+		{
+			"rooms_shortname": "FNH",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.26414,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "FNH",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26414,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "PCOH",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.264,
+			"countFurniture": 2
+		},
+		{
+			"rooms_shortname": "PCOH",
+			"rooms_type": "Small Group",
+			"maxLat": 49.264,
+			"countFurniture": 2
+		},
+		{
+			"rooms_shortname": "SCRF",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26398,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "SCRF",
+			"rooms_type": "Small Group",
+			"maxLat": 49.26398,
+			"countFurniture": 2
+		},
+		{
+			"rooms_shortname": "AERL",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26372,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "SWNG",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.26293,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "SWNG",
+			"rooms_type": "Small Group",
+			"maxLat": 49.26293,
+			"countFurniture": 2
+		},
+		{
+			"rooms_shortname": "SWNG",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26293,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "ESB",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26274,
+			"countFurniture": 3
+		},
+		{
+			"rooms_shortname": "CEME",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26273,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "CEME",
+			"rooms_type": "Case Style",
+			"maxLat": 49.26273,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "CEME",
+			"rooms_type": "Small Group",
+			"maxLat": 49.26273,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "LSC",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26236,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "PHRM",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26229,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "PHRM",
+			"rooms_type": "Small Group",
+			"maxLat": 49.26229,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "PHRM",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.26229,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "EOSM",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.26228,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "CHBE",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26228,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "CHBE",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.26228,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "CIRS",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26207,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "MCLD",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26176,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "MCLD",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.26176,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "MCLD",
+			"rooms_type": "Small Group",
+			"maxLat": 49.26176,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "FORW",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.26176,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "FORW",
+			"rooms_type": "Small Group",
+			"maxLat": 49.26176,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "DMP",
+			"rooms_type": "Small Group",
+			"maxLat": 49.26125,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "DMP",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26125,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "MCML",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.26114,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "MCML",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26114,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "MCML",
+			"rooms_type": "Case Style",
+			"maxLat": 49.26114,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "MCML",
+			"rooms_type": "Small Group",
+			"maxLat": 49.26114,
+			"countFurniture": 2
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_type": "Active Learning",
+			"maxLat": 49.26048,
+			"countFurniture": 3
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.26048,
+			"countFurniture": 3
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_type": "Studio Lab",
+			"maxLat": 49.26048,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "OSBO",
+			"rooms_type": "Small Group",
+			"maxLat": 49.26047,
+			"countFurniture": 2
+		},
+		{
+			"rooms_shortname": "OSBO",
+			"rooms_type": "Open Design General Purpose",
+			"maxLat": 49.26047,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "FSC",
+			"rooms_type": "Case Style",
+			"maxLat": 49.26044,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "FSC",
+			"rooms_type": "Small Group",
+			"maxLat": 49.26044,
+			"countFurniture": 1
+		},
+		{
+			"rooms_shortname": "FSC",
+			"rooms_type": "Tiered Large Group",
+			"maxLat": 49.26044,
+			"countFurniture": 1
+		}
+	]
+}

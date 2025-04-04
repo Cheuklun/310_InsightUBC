@@ -1,0 +1,67 @@
+{
+	"title": "validSumDiffGroup",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_furniture",
+				"totalSeats"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_furniture"
+			],
+			"APPLY": [
+				{
+					"totalSeats": {
+						"SUM": "rooms_seats"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"rooms_furniture": "Classroom-Fixed Tables/Movable Chairs",
+			"totalSeats": 6231
+		},
+		{
+			"rooms_furniture": "Classroom-Movable Tables & Chairs",
+			"totalSeats": 6479
+		},
+		{
+			"rooms_furniture": "Classroom-Moveable Tables & Chairs",
+			"totalSeats": 506
+		},
+		{
+			"rooms_furniture": "Classroom-Moveable Tablets",
+			"totalSeats": 90
+		},
+		{
+			"rooms_furniture": "Classroom-Fixed Tablets",
+			"totalSeats": 6332
+		},
+		{
+			"rooms_furniture": "Classroom-Fixed Tables/Fixed Chairs",
+			"totalSeats": 1572
+		},
+		{
+			"rooms_furniture": "Classroom-Fixed Tables/Moveable Chairs",
+			"totalSeats": 212
+		},
+		{
+			"rooms_furniture": "Classroom-Movable Tablets",
+			"totalSeats": 1516
+		},
+		{
+			"rooms_furniture": "Classroom-Hybrid Furniture",
+			"totalSeats": 381
+		},
+		{
+			"rooms_furniture": "Classroom-Learn Lab",
+			"totalSeats": 150
+		}
+	]
+}

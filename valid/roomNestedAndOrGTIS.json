@@ -1,0 +1,189 @@
+{
+	"title": "roomNestedAndOrGTIS",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"AND": [
+						{
+							"IS": {
+								"rooms_furniture": "*Tables*"
+							}
+						},
+						{
+							"GT": {
+								"rooms_seats": 300
+							}
+						}
+					]
+				},
+				{
+					"IS": {
+						"rooms_address": "*Agronomy*"
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"rooms_seats",
+				"rooms_address"
+			],
+			"ORDER": "rooms_seats"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_seats": 16,
+			"rooms_address": "6363 Agronomy Road"
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_seats": 16,
+			"rooms_address": "6363 Agronomy Road"
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_seats": 16,
+			"rooms_address": "6363 Agronomy Road"
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_seats": 16,
+			"rooms_address": "6363 Agronomy Road"
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_seats": 16,
+			"rooms_address": "6363 Agronomy Road"
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_seats": 20,
+			"rooms_address": "6363 Agronomy Road"
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_seats": 25,
+			"rooms_address": "6363 Agronomy Road"
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_seats": 25,
+			"rooms_address": "6363 Agronomy Road"
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_seats": 25,
+			"rooms_address": "6363 Agronomy Road"
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_seats": 25,
+			"rooms_address": "6363 Agronomy Road"
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_seats": 25,
+			"rooms_address": "6363 Agronomy Road"
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_seats": 25,
+			"rooms_address": "6363 Agronomy Road"
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_seats": 25,
+			"rooms_address": "6363 Agronomy Road"
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_seats": 25,
+			"rooms_address": "6363 Agronomy Road"
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_seats": 25,
+			"rooms_address": "6363 Agronomy Road"
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_seats": 25,
+			"rooms_address": "6363 Agronomy Road"
+		},
+		{
+			"rooms_shortname": "DMP",
+			"rooms_seats": 40,
+			"rooms_address": "6245 Agronomy Road V6T 1Z4"
+		},
+		{
+			"rooms_shortname": "DMP",
+			"rooms_seats": 40,
+			"rooms_address": "6245 Agronomy Road V6T 1Z4"
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_seats": 48,
+			"rooms_address": "6363 Agronomy Road"
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_seats": 48,
+			"rooms_address": "6363 Agronomy Road"
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_seats": 72,
+			"rooms_address": "6363 Agronomy Road"
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_seats": 72,
+			"rooms_address": "6363 Agronomy Road"
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_seats": 72,
+			"rooms_address": "6363 Agronomy Road"
+		},
+		{
+			"rooms_shortname": "DMP",
+			"rooms_seats": 80,
+			"rooms_address": "6245 Agronomy Road V6T 1Z4"
+		},
+		{
+			"rooms_shortname": "DMP",
+			"rooms_seats": 120,
+			"rooms_address": "6245 Agronomy Road V6T 1Z4"
+		},
+		{
+			"rooms_shortname": "DMP",
+			"rooms_seats": 160,
+			"rooms_address": "6245 Agronomy Road V6T 1Z4"
+		},
+		{
+			"rooms_shortname": "LSC",
+			"rooms_seats": 350,
+			"rooms_address": "2350 Health Sciences Mall"
+		},
+		{
+			"rooms_shortname": "LSC",
+			"rooms_seats": 350,
+			"rooms_address": "2350 Health Sciences Mall"
+		},
+		{
+			"rooms_shortname": "HEBB",
+			"rooms_seats": 375,
+			"rooms_address": "2045 East Mall"
+		},
+		{
+			"rooms_shortname": "OSBO",
+			"rooms_seats": 442,
+			"rooms_address": "6108 Thunderbird Boulevard"
+		}
+	]
+}

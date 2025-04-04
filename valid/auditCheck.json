@@ -1,0 +1,24 @@
+{
+	"title": "auditCheck",
+	"input": {
+		"WHERE": {
+			"EQ": {
+				"sections_audit": 20
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_avg"
+			],
+			"ORDER": "sections_avg"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_dept": "rhsc",
+			"sections_avg": 87.26
+		}
+	]
+}

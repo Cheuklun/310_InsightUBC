@@ -1,0 +1,71 @@
+{
+	"title": "sectionsAvgYearQuery",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_year",
+				"overallAvg"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"sections_year"
+			],
+			"APPLY": [
+				{
+					"overallAvg": {
+						"AVG": "sections_avg"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_year": 1900,
+			"overallAvg": 79.26
+		},
+		{
+			"sections_year": 2007,
+			"overallAvg": 76.27
+		},
+		{
+			"sections_year": 2008,
+			"overallAvg": 77.16
+		},
+		{
+			"sections_year": 2009,
+			"overallAvg": 77
+		},
+		{
+			"sections_year": 2010,
+			"overallAvg": 77.48
+		},
+		{
+			"sections_year": 2011,
+			"overallAvg": 77.67
+		},
+		{
+			"sections_year": 2012,
+			"overallAvg": 77.81
+		},
+		{
+			"sections_year": 2013,
+			"overallAvg": 78.01
+		},
+		{
+			"sections_year": 2014,
+			"overallAvg": 77.96
+		},
+		{
+			"sections_year": 2015,
+			"overallAvg": 78.22
+		},
+		{
+			"sections_year": 2016,
+			"overallAvg": 78.17
+		}
+	]
+}

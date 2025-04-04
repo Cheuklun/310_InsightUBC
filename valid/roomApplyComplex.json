@@ -1,0 +1,727 @@
+{
+	"title": "roomApplyComplex",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"rooms_type",
+				"countUUID",
+				"avgSeats",
+				"maxLat"
+			],
+			"ORDER": {
+				"dir": "UP",
+				"keys": [
+					"avgSeats",
+					"rooms_shortname"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_shortname",
+				"rooms_type"
+			],
+			"APPLY": [
+				{
+					"countUUID": {
+						"COUNT": "rooms_href"
+					}
+				},
+				{
+					"avgSeats": {
+						"AVG": "rooms_seats"
+					}
+				},
+				{
+					"maxLat": {
+						"MAX": "rooms_lat"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"rooms_shortname": "PHRM",
+			"rooms_type": "Small Group",
+			"countUUID": 8,
+			"avgSeats": 7.88,
+			"maxLat": 49.26229
+		},
+		{
+			"rooms_shortname": "MCML",
+			"rooms_type": "Small Group",
+			"countUUID": 15,
+			"avgSeats": 12,
+			"maxLat": 49.26114
+		},
+		{
+			"rooms_shortname": "SOWK",
+			"rooms_type": "Small Group",
+			"countUUID": 3,
+			"avgSeats": 14.67,
+			"maxLat": 49.2643
+		},
+		{
+			"rooms_shortname": "BIOL",
+			"rooms_type": "Small Group",
+			"countUUID": 2,
+			"avgSeats": 16,
+			"maxLat": 49.26479
+		},
+		{
+			"rooms_shortname": "WOOD",
+			"rooms_type": "Small Group",
+			"countUUID": 10,
+			"avgSeats": 16.5,
+			"maxLat": 49.26478
+		},
+		{
+			"rooms_shortname": "IBLC",
+			"rooms_type": "Small Group",
+			"countUUID": 15,
+			"avgSeats": 16.8,
+			"maxLat": 49.26766
+		},
+		{
+			"rooms_shortname": "LASR",
+			"rooms_type": "Small Group",
+			"countUUID": 2,
+			"avgSeats": 20,
+			"maxLat": 49.26767
+		},
+		{
+			"rooms_shortname": "SPPH",
+			"rooms_type": "Small Group",
+			"countUUID": 5,
+			"avgSeats": 20,
+			"maxLat": 49.2642
+		},
+		{
+			"rooms_shortname": "AUDX",
+			"rooms_type": "Small Group",
+			"countUUID": 2,
+			"avgSeats": 20.5,
+			"maxLat": 49.2666
+		},
+		{
+			"rooms_shortname": "ANGU",
+			"rooms_type": "Small Group",
+			"countUUID": 4,
+			"avgSeats": 21.75,
+			"maxLat": 49.26486
+		},
+		{
+			"rooms_shortname": "FNH",
+			"rooms_type": "Small Group",
+			"countUUID": 3,
+			"avgSeats": 22.33,
+			"maxLat": 49.26414
+		},
+		{
+			"rooms_shortname": "FSC",
+			"rooms_type": "Small Group",
+			"countUUID": 6,
+			"avgSeats": 23.67,
+			"maxLat": 49.26044
+		},
+		{
+			"rooms_shortname": "BRKX",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 1,
+			"avgSeats": 24,
+			"maxLat": 49.26862
+		},
+		{
+			"rooms_shortname": "CEME",
+			"rooms_type": "Small Group",
+			"countUUID": 2,
+			"avgSeats": 24,
+			"maxLat": 49.26273
+		},
+		{
+			"rooms_shortname": "PCOH",
+			"rooms_type": "Small Group",
+			"countUUID": 5,
+			"avgSeats": 24,
+			"maxLat": 49.264
+		},
+		{
+			"rooms_shortname": "BUCH",
+			"rooms_type": "Small Group",
+			"countUUID": 27,
+			"avgSeats": 27,
+			"maxLat": 49.26826
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 10,
+			"avgSeats": 27,
+			"maxLat": 49.26048
+		},
+		{
+			"rooms_shortname": "SWNG",
+			"rooms_type": "Small Group",
+			"countUUID": 9,
+			"avgSeats": 27,
+			"maxLat": 49.26293
+		},
+		{
+			"rooms_shortname": "ALRD",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 3,
+			"avgSeats": 28,
+			"maxLat": 49.2699
+		},
+		{
+			"rooms_shortname": "GEOG",
+			"rooms_type": "Small Group",
+			"countUUID": 2,
+			"avgSeats": 30,
+			"maxLat": 49.26605
+		},
+		{
+			"rooms_shortname": "UCLL",
+			"rooms_type": "Small Group",
+			"countUUID": 1,
+			"avgSeats": 30,
+			"maxLat": 49.26867
+		},
+		{
+			"rooms_shortname": "UCLL",
+			"rooms_type": "Studio Lab",
+			"countUUID": 1,
+			"avgSeats": 30,
+			"maxLat": 49.26867
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_type": "Active Learning",
+			"countUUID": 9,
+			"avgSeats": 30.22,
+			"maxLat": 49.26048
+		},
+		{
+			"rooms_shortname": "ANGU",
+			"rooms_type": "TBD",
+			"countUUID": 1,
+			"avgSeats": 32,
+			"maxLat": 49.26486
+		},
+		{
+			"rooms_shortname": "ANSO",
+			"rooms_type": "Small Group",
+			"countUUID": 3,
+			"avgSeats": 32,
+			"maxLat": 49.26958
+		},
+		{
+			"rooms_shortname": "HENN",
+			"rooms_type": "Small Group",
+			"countUUID": 3,
+			"avgSeats": 32,
+			"maxLat": 49.26627
+		},
+		{
+			"rooms_shortname": "MGYM",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 2,
+			"avgSeats": 32.5,
+			"maxLat": 49.2663
+		},
+		{
+			"rooms_shortname": "SCRF",
+			"rooms_type": "Small Group",
+			"countUUID": 21,
+			"avgSeats": 34.48,
+			"maxLat": 49.26398
+		},
+		{
+			"rooms_shortname": "MATH",
+			"rooms_type": "Small Group",
+			"countUUID": 3,
+			"avgSeats": 38.33,
+			"maxLat": 49.266463
+		},
+		{
+			"rooms_shortname": "MATH",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 4,
+			"avgSeats": 39,
+			"maxLat": 49.266463
+		},
+		{
+			"rooms_shortname": "SOWK",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 4,
+			"avgSeats": 39.25,
+			"maxLat": 49.2643
+		},
+		{
+			"rooms_shortname": "FORW",
+			"rooms_type": "Small Group",
+			"countUUID": 2,
+			"avgSeats": 39.5,
+			"maxLat": 49.26176
+		},
+		{
+			"rooms_shortname": "OSBO",
+			"rooms_type": "Small Group",
+			"countUUID": 2,
+			"avgSeats": 39.5,
+			"maxLat": 49.26047
+		},
+		{
+			"rooms_shortname": "DMP",
+			"rooms_type": "Small Group",
+			"countUUID": 2,
+			"avgSeats": 40,
+			"maxLat": 49.26125
+		},
+		{
+			"rooms_shortname": "MCLD",
+			"rooms_type": "Small Group",
+			"countUUID": 1,
+			"avgSeats": 40,
+			"maxLat": 49.26176
+		},
+		{
+			"rooms_shortname": "PCOH",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 3,
+			"avgSeats": 40,
+			"maxLat": 49.264
+		},
+		{
+			"rooms_shortname": "BUCH",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 18,
+			"avgSeats": 40.56,
+			"maxLat": 49.26826
+		},
+		{
+			"rooms_shortname": "ANGU",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 7,
+			"avgSeats": 46.57,
+			"maxLat": 49.26486
+		},
+		{
+			"rooms_shortname": "CEME",
+			"rooms_type": "Case Style",
+			"countUUID": 3,
+			"avgSeats": 47,
+			"maxLat": 49.26273
+		},
+		{
+			"rooms_shortname": "MCML",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 1,
+			"avgSeats": 47,
+			"maxLat": 49.26114
+		},
+		{
+			"rooms_shortname": "SWNG",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 9,
+			"avgSeats": 47,
+			"maxLat": 49.26293
+		},
+		{
+			"rooms_shortname": "FNH",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 2,
+			"avgSeats": 48.5,
+			"maxLat": 49.26414
+		},
+		{
+			"rooms_shortname": "ANGU",
+			"rooms_type": "Case Style",
+			"countUUID": 8,
+			"avgSeats": 49.38,
+			"maxLat": 49.26486
+		},
+		{
+			"rooms_shortname": "EOSM",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 1,
+			"avgSeats": 50,
+			"maxLat": 49.26228
+		},
+		{
+			"rooms_shortname": "IBLC",
+			"rooms_type": "Case Style",
+			"countUUID": 1,
+			"avgSeats": 50,
+			"maxLat": 49.26766
+		},
+		{
+			"rooms_shortname": "IONA",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 1,
+			"avgSeats": 50,
+			"maxLat": 49.27106
+		},
+		{
+			"rooms_shortname": "LASR",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 1,
+			"avgSeats": 51,
+			"maxLat": 49.26767
+		},
+		{
+			"rooms_shortname": "UCLL",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 2,
+			"avgSeats": 51.5,
+			"maxLat": 49.26867
+		},
+		{
+			"rooms_shortname": "HEBB",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 3,
+			"avgSeats": 54,
+			"maxLat": 49.2661
+		},
+		{
+			"rooms_shortname": "LSK",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 2,
+			"avgSeats": 58.5,
+			"maxLat": 49.26545
+		},
+		{
+			"rooms_shortname": "CHBE",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 1,
+			"avgSeats": 60,
+			"maxLat": 49.26228
+		},
+		{
+			"rooms_shortname": "LASR",
+			"rooms_type": "",
+			"countUUID": 1,
+			"avgSeats": 60,
+			"maxLat": 49.26767
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"rooms_type": "Studio Lab",
+			"countUUID": 2,
+			"avgSeats": 60,
+			"maxLat": 49.26048
+		},
+		{
+			"rooms_shortname": "FORW",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 1,
+			"avgSeats": 63,
+			"maxLat": 49.26176
+		},
+		{
+			"rooms_shortname": "FSC",
+			"rooms_type": "Case Style",
+			"countUUID": 2,
+			"avgSeats": 65,
+			"maxLat": 49.26044
+		},
+		{
+			"rooms_shortname": "SPPH",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 1,
+			"avgSeats": 66,
+			"maxLat": 49.2642
+		},
+		{
+			"rooms_shortname": "GEOG",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 5,
+			"avgSeats": 66.8,
+			"maxLat": 49.26605
+		},
+		{
+			"rooms_shortname": "MCLD",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 3,
+			"avgSeats": 68,
+			"maxLat": 49.26176
+		},
+		{
+			"rooms_shortname": "BRKX",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 1,
+			"avgSeats": 70,
+			"maxLat": 49.26862
+		},
+		{
+			"rooms_shortname": "ALRD",
+			"rooms_type": "Case Style",
+			"countUUID": 2,
+			"avgSeats": 72,
+			"maxLat": 49.2699
+		},
+		{
+			"rooms_shortname": "MCML",
+			"rooms_type": "Case Style",
+			"countUUID": 1,
+			"avgSeats": 72,
+			"maxLat": 49.26114
+		},
+		{
+			"rooms_shortname": "PHRM",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 1,
+			"avgSeats": 72,
+			"maxLat": 49.26229
+		},
+		{
+			"rooms_shortname": "BUCH",
+			"rooms_type": "Case Style",
+			"countUUID": 6,
+			"avgSeats": 82.17,
+			"maxLat": 49.26826
+		},
+		{
+			"rooms_shortname": "LASR",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 2,
+			"avgSeats": 87,
+			"maxLat": 49.26767
+		},
+		{
+			"rooms_shortname": "ANGU",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 8,
+			"avgSeats": 88.25,
+			"maxLat": 49.26486
+		},
+		{
+			"rooms_shortname": "ANSO",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 1,
+			"avgSeats": 90,
+			"maxLat": 49.26958
+		},
+		{
+			"rooms_shortname": "FNH",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 1,
+			"avgSeats": 99,
+			"maxLat": 49.26414
+		},
+		{
+			"rooms_shortname": "CEME",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 1,
+			"avgSeats": 100,
+			"maxLat": 49.26273
+		},
+		{
+			"rooms_shortname": "IONA",
+			"rooms_type": "Case Style",
+			"countUUID": 1,
+			"avgSeats": 100,
+			"maxLat": 49.27106
+		},
+		{
+			"rooms_shortname": "MATX",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 1,
+			"avgSeats": 106,
+			"maxLat": 49.266089
+		},
+		{
+			"rooms_shortname": "IBLC",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 1,
+			"avgSeats": 112,
+			"maxLat": 49.26766
+		},
+		{
+			"rooms_shortname": "DMP",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 3,
+			"avgSeats": 120,
+			"maxLat": 49.26125
+		},
+		{
+			"rooms_shortname": "BUCH",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 10,
+			"avgSeats": 123.8,
+			"maxLat": 49.26826
+		},
+		{
+			"rooms_shortname": "MCLD",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 2,
+			"avgSeats": 129.5,
+			"maxLat": 49.26176
+		},
+		{
+			"rooms_shortname": "MCML",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 2,
+			"avgSeats": 137,
+			"maxLat": 49.26114
+		},
+		{
+			"rooms_shortname": "AERL",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 1,
+			"avgSeats": 144,
+			"maxLat": 49.26372
+		},
+		{
+			"rooms_shortname": "CHBE",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 2,
+			"avgSeats": 147,
+			"maxLat": 49.26228
+		},
+		{
+			"rooms_shortname": "BIOL",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 2,
+			"avgSeats": 152,
+			"maxLat": 49.26479
+		},
+		{
+			"rooms_shortname": "CHEM",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 6,
+			"avgSeats": 152.17,
+			"maxLat": 49.2659
+		},
+		{
+			"rooms_shortname": "IBLC",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 1,
+			"avgSeats": 154,
+			"maxLat": 49.26766
+		},
+		{
+			"rooms_shortname": "FRDM",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 1,
+			"avgSeats": 160,
+			"maxLat": 49.26541
+		},
+		{
+			"rooms_shortname": "FSC",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 2,
+			"avgSeats": 174.5,
+			"maxLat": 49.26044
+		},
+		{
+			"rooms_shortname": "HENN",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 3,
+			"avgSeats": 187.33,
+			"maxLat": 49.26627
+		},
+		{
+			"rooms_shortname": "WOOD",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 6,
+			"avgSeats": 188.67,
+			"maxLat": 49.26478
+		},
+		{
+			"rooms_shortname": "SWNG",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 4,
+			"avgSeats": 188.75,
+			"maxLat": 49.26293
+		},
+		{
+			"rooms_shortname": "ESB",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 3,
+			"avgSeats": 193.33,
+			"maxLat": 49.26274
+		},
+		{
+			"rooms_shortname": "LSK",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 2,
+			"avgSeats": 194,
+			"maxLat": 49.26545
+		},
+		{
+			"rooms_shortname": "PHRM",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 2,
+			"avgSeats": 201.5,
+			"maxLat": 49.26229
+		},
+		{
+			"rooms_shortname": "WESB",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 2,
+			"avgSeats": 213.5,
+			"maxLat": 49.26517
+		},
+		{
+			"rooms_shortname": "MATH",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 1,
+			"avgSeats": 224,
+			"maxLat": 49.266463
+		},
+		{
+			"rooms_shortname": "GEOG",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 1,
+			"avgSeats": 225,
+			"maxLat": 49.26605
+		},
+		{
+			"rooms_shortname": "LSC",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 3,
+			"avgSeats": 275,
+			"maxLat": 49.26236
+		},
+		{
+			"rooms_shortname": "SCRF",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 1,
+			"avgSeats": 280,
+			"maxLat": 49.26398
+		},
+		{
+			"rooms_shortname": "SRC",
+			"rooms_type": "TBD",
+			"countUUID": 3,
+			"avgSeats": 299,
+			"maxLat": 49.2683
+		},
+		{
+			"rooms_shortname": "HEBB",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 1,
+			"avgSeats": 375,
+			"maxLat": 49.2661
+		},
+		{
+			"rooms_shortname": "CIRS",
+			"rooms_type": "Tiered Large Group",
+			"countUUID": 1,
+			"avgSeats": 426,
+			"maxLat": 49.26207
+		},
+		{
+			"rooms_shortname": "OSBO",
+			"rooms_type": "Open Design General Purpose",
+			"countUUID": 1,
+			"avgSeats": 442,
+			"maxLat": 49.26047
+		}
+	]
+}

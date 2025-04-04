@@ -1,0 +1,19 @@
+{
+	"title": "validNoResult",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"rooms_seats": 10000
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"rooms_number",
+				"rooms_seats"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": []
+}

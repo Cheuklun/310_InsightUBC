@@ -1,0 +1,174 @@
+{
+	"title": "nestedAND",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"AND": [
+						{
+							"IS": {
+								"sections_dept": "cpsc"
+							}
+						},
+						{
+							"IS": {
+								"sections_instructor": "e*"
+							}
+						}
+					]
+				},
+				{
+					"GT": {
+						"sections_year": 2000
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_avg"
+			],
+			"ORDER": "sections_avg"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 69.59
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 71.6
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 72.75
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 73.64
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 74.04
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 74.2
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 75.22
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 75.28
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 75.81
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 76.13
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 76.31
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 76.59
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 77.78
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 77.78
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 78.24
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 78.72
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 78.93
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 80.52
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 81.84
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 81.9
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 82.43
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 83
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 83.15
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 83.17
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 84.56
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 84.66
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 84.85
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 85.13
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 85.59
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 85.72
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 86.12
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 86.13
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 86.22
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_avg": 86.47
+		}
+	]
+}
