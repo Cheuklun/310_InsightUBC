@@ -1,0 +1,11 @@
+{
+	"title": "roomMissingColumn",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"ORDER": "rooms_shortname"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

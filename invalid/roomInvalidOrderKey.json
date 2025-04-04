@@ -1,0 +1,15 @@
+{
+	"title": "roomInvalidOrderKey",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"rooms_seats"
+			],
+			"ORDER": "rooms_fullname"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

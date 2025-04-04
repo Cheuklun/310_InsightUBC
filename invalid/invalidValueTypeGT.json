@@ -1,0 +1,19 @@
+{
+	"title": "invalidValueTypeGT",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"sections_avg": "99"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_uuid",
+				"sections_avg",
+				"sections_id"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

@@ -1,0 +1,15 @@
+{
+	"title": "roomInvalidKey",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"sections_avg"
+			],
+			"ORDER": "rooms_shortname"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

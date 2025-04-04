@@ -1,0 +1,19 @@
+{
+	"title": "doubUnderscoreOrder",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"sections_avg": 97
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_avg"
+			],
+			"ORDER": "sections__avg"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

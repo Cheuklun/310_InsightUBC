@@ -1,0 +1,17 @@
+{
+	"title": "roomInvalidWildcard",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"rooms_shortname": "A*X"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

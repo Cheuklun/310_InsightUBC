@@ -1,0 +1,19 @@
+{
+	"title": "invalidKeyEQ",
+	"input": {
+		"WHERE": {
+			"EQ": {
+				"id": 97
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_uuid",
+				"sections_avg",
+				"sections_id"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

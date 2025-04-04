@@ -1,0 +1,17 @@
+{
+	"title": "roomNoGroup",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [],
+			"APPLY": []
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

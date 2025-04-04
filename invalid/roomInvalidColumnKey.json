@@ -1,0 +1,14 @@
+{
+	"title": "roomInvalidColumnKey",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"rooms_invalid"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

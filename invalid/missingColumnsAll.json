@@ -1,0 +1,15 @@
+{
+	"title": "missingColumnsAll",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"sections_avg": 97
+			}
+		},
+		"OPTIONS": {
+			"ORDER": "sections_fake"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

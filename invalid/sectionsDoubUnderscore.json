@@ -1,0 +1,19 @@
+{
+	"title": "sectionsDoubUnderscore",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"sections__title": "ENVR300"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_avg"
+			],
+			"ORDER": "sections_avg"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

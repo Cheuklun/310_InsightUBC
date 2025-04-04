@@ -1,0 +1,13 @@
+{
+	"title": "roomInvalidWhere",
+	"input": {
+		"WHERE": "rooms_seats > 50",
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

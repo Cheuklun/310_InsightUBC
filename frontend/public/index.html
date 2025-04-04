@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>Section Insight 310 Frontend</title>
+	<link href="/style.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<h1>Section Insights 310 Frontend</h1>
+
+<!-- Top Section: Add Dataset -->
+<section id="dataset-form">
+	<h2>Add Dataset</h2>
+	<input type="text" id="dataset-id" placeholder="Enter dataset ID">
+	<div>
+		<h3>Kind</h3>
+		<select id="kind">
+			<option value="sections">sections</option>
+			<option value="rooms">rooms</option>
+		</select>
+	</div>
+	<input type="file" id="dataset-file" accept=".zip">
+	<button id="add-dataset-btn">Add Dataset</button>
+	<p id="feedback"></p>
+</section>
+
+<!-- Middle Section: Display and Update Datasets -->
+<section id="datasets-list">
+	<h2>Datasets</h2>
+	<table id="datasetTable">
+		<thead>
+		<tr>
+			<th>ID</th>
+			<th>KIND</th>
+<!--			<th>FIRST DATA</th>-->
+			<th>NUMBER OF ROWS</th>
+			<th>REMOVE</th>
+		</tr>
+		</thead>
+		<tbody>
+		<!-- Dynamically updated dataset rows go here -->
+		</tbody>
+	</table>
+</section>
+
+<!-- Bottom Section: Querying and Visual Insights -->
+<section id="query-section">
+	<h2>Queries and Insights</h2>
+	<div class="query-controls">
+		<button id="btn1">Average Course Grades over the Years</button>
+		<button id="btn2">Pass/Fail Department Count</button>
+		<button id="btn3">Top Instructors by Course Performance</button>
+
+		<!-- Input Fields for Query Button 1 -->
+		<div id="input-1" class="input-fields">
+			<label for="field1-1">DatasetID:</label>
+			<input type="text" id="field1-1" name="field1-1" placeholder="Enter DatasetID"><br><br>
+		</div>
+
+		<!-- Input Fields for Query Button 2 -->
+		<div id="input-2" class="input-fields">
+			<label for="field1-2">DatasetID:</label>
+			<input type="text" id="field1-2" name="field1-2" placeholder="Enter DatasetID"><br><br>
+		</div>
+
+		<!-- Input Fields for Query Button 3 -->
+		<div id="input-3" class="input-fields">
+			<label for="field1-3">DatasetID:</label>
+			<input type="text" id="field1-3" name="field1-3" placeholder="Enter DatasetID"><br><br>
+		</div>
+
+		<button type="submit" id="generateQueryBtn">Generate Query</button>
+	</div>
+	<div id="visualizationSection">
+		<h2>Query Results</h2>
+		<canvas id="avgScoreChart"></canvas>
+		<canvas id="passFailAuditChart"></canvas>
+		<canvas id="topInstructorChart"></canvas>
+	</div>
+</section>
+
+<script type="text/javascript" src="/frontend.js"></script>
+</body>
+</html>

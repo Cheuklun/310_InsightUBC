@@ -1,0 +1,23 @@
+{
+	"title": "datasetNotAdded",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"ubc_instructor": "c*"
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"ubc_dept",
+				"ubc_avg"
+			],
+			"ORDER": "ubc_avg"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}
